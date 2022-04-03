@@ -3,10 +3,10 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\TagMeals;
+use App\Models\MealsTags;
 use Faker\Generator as Faker;
 
-class TagMealFactory extends Factory
+class MealsTagsFactory extends Factory
 {
     /**
      * Define the model's default state.

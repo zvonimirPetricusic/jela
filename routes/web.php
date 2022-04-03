@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/meals', [App\Http\Controllers\MealsController::class, 'index']);
+
+

@@ -13,13 +13,13 @@ class CreateTagMealsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tag_meals', function (Blueprint $table) {
-            $table->integer('tag_id')->unsigned();
-            $table->integer('meal_id')->unsigned();
+        Schema::create('meals_tags', function (Blueprint $table) {
+            $table->integer('tags_id')->unsigned();
+            $table->integer('meals_id')->unsigned();
 
-            $table->foreign('tag_id')->references('id')->on('tags');
-            $table->foreign('meal_id')->references('id')->on('meals');
-            $table->primary(['tag_id','meal_id']);
+            $table->foreign('tags_id')->references('id')->on('tags');
+            $table->foreign('meals_id')->references('id')->on('meals');
+            $table->primary(['tags_id','meals_id']);
             $table->timestamps();
         });
     }

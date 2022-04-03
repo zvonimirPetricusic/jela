@@ -7,7 +7,7 @@ use App\Models\Meals;
 use App\Models\Tags;
 use App\Models\IngrediantMeals;
 use App\Models\Ingrediants;
-use App\Models\TagMeal;
+use App\Models\MealsTags;
 
 class MealsSeederTable extends Seeder
 {
@@ -24,9 +24,9 @@ class MealsSeederTable extends Seeder
       foreach($meals as $m){
         $tags = Tags::inRandomOrder()->first();
         $tag_id = $tags["id"];
-        TagMeal::factory()->create([
-           "meal_id" => $m["id"],
-           "tag_id" => $tag_id
+        MealsTags::factory()->create([
+           "meals_id" => $m["id"],
+           "tags_id" => $tag_id
         ]);
       }
 
